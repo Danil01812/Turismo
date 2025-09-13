@@ -1,0 +1,140 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body con fondo cálido y tipografía legible */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f3e9dc; /* tono beige cálido */
+  color: #4b3b2b; /* marrón oscuro */
+  padding: 40px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título principal */
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #a0522d; /* sienna oscuro */
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(160, 82, 45, 0.3);
+}
+
+/* Contenedor principal */
+.Padre {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.hijo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  justify-content: center;
+}
+
+/* Tarjetas individuales estilo maya */
+.nieto {
+  background: #fff7f0;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(165, 105, 60, 0.25);
+  border: 3px solid #c77c3c;
+  padding: 25px 30px;
+  width: 100%;
+  max-width: 520px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.nieto:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(165, 105, 60, 0.45);
+}
+
+/* Títulos de sección */
+.nieto h2 {
+  font-size: 1.8rem;
+  color: #8b4513; /* marrón madera */
+  margin-bottom: 15px;
+  border-bottom: 3px solid #d2691e; /* chocolate */
+  padding-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-family: 'Palatino Linotype', 'Georgia', serif;
+}
+
+/* Imágenes con borde y sombra suave */
+.nieto img {
+  width: 100%;
+  border-radius: 15px;
+  margin: 20px 0;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  object-fit: cover;
+  height: 250px;
+  transition: transform 0.4s ease;
+}
+
+.nieto img:hover {
+  transform: scale(1.04);
+}
+
+/* Listas estilizadas */
+.nieto ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.nieto li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 14px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #5b4330;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Viñeta personalizada estilo maya */
+.nieto li::before {
+  content: "▲";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  font-size: 1.2rem;
+  color: #c1622e; /* naranja quemado */
+  transform: rotate(180deg);
+}
+
+/* Footer simple centrado */
+footer {
+  margin-top: 60px;
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+  color: #a0522d;
+  font-weight: 600;
+  border-top: 1px solid #c77c3c;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .nieto {
+    max-width: 100%;
+  }
+}

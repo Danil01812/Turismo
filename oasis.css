@@ -1,0 +1,119 @@
+/* Reset básico para consistencia entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cuerpo general */
+body {
+    font-family: 'Palatino Linotype', 'Georgia', serif;
+    background: linear-gradient(to right, #f6f3ef, #e9e4dc);
+    color: #2c2c2c;
+    padding: 40px 20px;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    font-size: 3em;
+    color: #7b4f2c;
+    margin-bottom: 50px;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Contenedor principal */
+.Padre {
+    display: flex;
+    justify-content: center;
+}
+
+.hijo {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Secciones individuales */
+.nieto {
+    background: #fffaf5;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+    border: 1px solid #ded2c2;
+    padding: 25px;
+    width: 100%;
+    max-width: 540px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nieto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos de sección */
+.nieto h2 {
+    font-size: 1.7em;
+    color: #a05a2c;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e0d6c9;
+    padding-bottom: 5px;
+}
+
+/* Estilo para imágenes */
+.nieto img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border: 1px solid #ccc;
+    object-fit: cover;
+}
+
+/* Efecto de zoom suave */
+.nieto img:hover {
+    transform: scale(1.02);
+    filter: brightness(95%) contrast(105%);
+}
+
+/* Listas sin bullets estándar */
+.nieto ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+/* Ítems de lista con ícono clásico */
+.nieto li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    font-size: 1.05em;
+    line-height: 1.6;
+}
+
+.nieto li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a05a2c;
+    font-size: 1.3em;
+    line-height: 1;
+}
+
+/* Responsivo para móviles y tablets */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2em;
+    }
+
+    .nieto {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,124 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body con fondo oscuro degradado */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1f2937, #374151);
+  color: #f3f4f6;
+  padding: 50px 20px;
+  min-height: 100vh;
+}
+
+/* Título principal */
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #fbbf24; /* amarillo dorado */
+  text-shadow: 0 0 8px #fbbf24;
+}
+
+/* Contenedor principal flexible */
+.Padre {
+  display: flex;
+  justify-content: center;
+}
+
+.hijo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  justify-content: center;
+}
+
+/* Tarjetas con efecto glassmorphism */
+.nieto {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 25px 30px;
+  width: 100%;
+  max-width: 520px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.nieto:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(255, 255, 255, 0.15);
+}
+
+/* Título de sección */
+.nieto h2 {
+  font-size: 1.8rem;
+  color: #fbbf24;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #fbbf24;
+  padding-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* Imágenes con borde redondeado y sombra */
+.nieto img {
+  width: 100%;
+  border-radius: 15px;
+  margin: 20px 0;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  object-fit: cover;
+  height: 250px;
+  transition: transform 0.4s ease;
+}
+
+.nieto img:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+
+/* Listas estilizadas con iconos personalizados */
+.nieto ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.nieto li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 14px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e5e7eb;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* Usamos un emoji personalizado en lugar de bullet */
+.nieto li::before {
+  content: "✨";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 1.3rem;
+  color: #fbbf24;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .nieto {
+    max-width: 100%;
+  }
+}

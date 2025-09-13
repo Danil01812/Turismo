@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contactos.css">
+</head>
+<body> 
+<section id="contacto" class="contact-section">
+  <h2>✉️ Contáctanos</h2>
+
+  <form id="contactForm" class="contact-form" novalidate>
+    <div class="row">
+      <label for="name">Nombre<span class="required"> *</span></label>
+      <input type="text" id="name" name="name" required placeholder="Tu nombre completo">
+    </div>
+
+    <div class="row">
+      <label for="email">Correo electrónico<span class="required"> *</span></label>
+      <input type="email" id="email" name="email" required placeholder="tucorreo@ejemplo.com">
+    </div>
+
+    <div class="row">
+      <label for="phone">Teléfono</label>
+      <input type="tel" id="phone" name="phone" placeholder="+51 9XXXXXXXX">
+    </div>
+
+    <div class="row">
+      <label for="topic">Asunto</label>
+      <select id="topic" name="topic">
+        <option value="consulta">Consulta general</option>
+        <option value="reserva">Reservas / Tours</option>
+        <option value="colaboracion">Colaboración</option>
+        <option value="otro">Otro</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label for="message">Mensaje<span class="required"> *</span></label>
+      <textarea id="message" name="message" required rows="6" placeholder="Escribe tu mensaje..."></textarea>
+    </div>
+
+    <div class="row consent">
+      <input type="checkbox" id="consent" name="consent" required>
+      <label for="consent">Acepto que usen mis datos para responder mi consulta.</label>
+    </div>
+
+    <div class="row actions">
+      <button type="submit" id="sendBtn">Enviar mensaje</button>
+      <button type="reset" class="secondary">Limpiar</button>
+    </div>
+
+    <p id="formMsg" class="form-msg" aria-live="polite"></p>
+  </form>
+</section>

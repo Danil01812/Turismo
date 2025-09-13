@@ -1,0 +1,100 @@
+/* Reset básico para asegurar consistencia en navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #2c3e50;
+}
+
+/* Contenedor principal */
+.Padre {
+    display: flex;
+    justify-content: center;
+}
+
+.hijo {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Cada bloque de información (nieto) */
+.nieto {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 550px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.nieto:hover {
+    transform: scale(1.02);
+}
+
+/* Títulos de sección */
+.nieto h2 {
+    color: #27ae60;
+    margin-bottom: 10px;
+    font-size: 1.6em;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* Imágenes */
+.nieto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+/* Listas de contenido */
+.nieto ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.nieto li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 15px 0;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+    .nieto {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}

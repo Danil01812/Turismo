@@ -1,0 +1,73 @@
+/* --- Estilo general --- */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff5f5; /* rojo muy claro de fondo */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Encabezado con fondo rojizo luminoso --- */
+header {
+    background: radial-gradient(circle, #fff1f1, #ffcccc, #e57373);
+    padding: 50px 0;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+    border-bottom: 5px solid #d32f2f; /* rojo oscuro suave */
+}
+
+header h1 {
+    font-size: 3.5rem;
+    color: #b71c1c;  /* tono rojo intenso pero no chillón */
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.9),
+                 3px 3px 12px rgba(244, 67, 54, 0.7);
+    animation: aparecer 2s ease-in-out;
+}
+
+/* Animación de entrada */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* --- Contenedor principal --- */
+.padre {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;  /* mantiene contraste con el rojo */
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(211,47,47,0.3); /* sombra rojiza */
+}
+
+/* --- Texto --- */
+.padre p {
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* --- Imagen --- */
+.padre img {
+    display: block;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(211,47,47,0.4); /* sombra roja suave */
+    transition: transform 0.3s ease-in-out;
+}
+
+.padre img:hover {
+    transform: scale(1.05);
+}

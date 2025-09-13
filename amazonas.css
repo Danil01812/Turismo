@@ -1,0 +1,89 @@
+/* --- Estilo general --- */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #e8f5e9, #c8e6c9); /* verde claro selva */
+    color: #2e3d27; /* verde bosque */
+    line-height: 1.6;
+}
+
+/* --- Título principal --- */
+h1 {
+    text-align: center;
+    background: #1b5e20; /* verde selva intenso */
+    color: #fff;
+    padding: 20px;
+    margin: 0;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+    border-bottom: 5px solid #4caf50;
+}
+
+/* --- Contenedor padre --- */
+.Padre {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* --- Contenedor hijo --- */
+.hijo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* --- Tarjetas (nietos) --- */
+.nieto {
+    background: #ffffffcc; /* blanco con transparencia */
+    border: 2px solid #4caf50;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.nieto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+/* --- Títulos secundarios --- */
+.nieto h2 {
+    color: #1b5e20;
+    text-align: center;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #4caf50;
+    padding-bottom: 5px;
+}
+
+/* --- Imágenes --- */
+.nieto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+/* --- Listas --- */
+.nieto ul {
+    list-style-type: "🌿 "; /* icono natural */
+    padding-left: 20px;
+    font-size: 0.95em;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    background: #1b5e20;
+    color: #fff;
+    padding: 10px;
+    margin-top: 30px;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
